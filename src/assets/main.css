@@ -1,0 +1,50 @@
+@import "../../dist/output.css";
+
+:root {
+  --main-color: #6ed209;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+#section1 {
+  margin-left: 25px;
+  background-image: url(/src/assets/images/section1/Background-1.png);
+  background-position: 100%;
+  background-attachment: scroll;
+  background-size: 200%;
+  margin-left: -0.9%;
+  margin-right: -0.9%;
+  margin-bottom: -0.1%;
+  height: 100vh;
+}
+.card-header {
+  padding: 3rem;
+  color: #1e1d1d;
+  display: inline-flex;
+  padding: 10px 92px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #1de086, #6dcf0b);
+  size: 30px;
+  margin-bottom: -40%;
+}
+
+/*seccion 2 - css */
+
+.section2 {
+  margin-left: 25px; /* Ajusta el valor para que el contenido de la sección 1 no quede oculto detrás de la barra lateral */
+  background-image: url(/src/assets/images/section2/Background-2.png);
+  background-position: 100%;
+  background-size: 100%;
+  margin-left: -0.9%;
+  margin-right: -0.9%;
+  margin-bottom: -0.1%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  color: white;
+}

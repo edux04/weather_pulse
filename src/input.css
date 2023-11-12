@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-button {
+  background-color: var(--main-color);
+  @apply text-white rounded-lg p-2 text-center;
+}
