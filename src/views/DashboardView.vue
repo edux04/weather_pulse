@@ -8,6 +8,7 @@ import {
   faCheck,
   faDropletSlash,
   faClock,
+  faX,
 } from "@fortawesome/free-solid-svg-icons";
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -17,7 +18,8 @@ library.add(
   faDroplet,
   faClock,
   faDropletSlash,
-  faCheck
+  faCheck,
+  faX
 );
 
 const dht11Data = ref([]);
@@ -154,7 +156,13 @@ watchEffect(() => {
                 <p>
                   <font-awesome-icon
                     v-if="data.estado == 'Encendida'"
+                    class="text-green-500"
                     icon="fa-solid fa-check"
+                  />
+                  <font-awesome-icon
+                    v-if="data.estado == 'Apagada'"
+                    class="text-red-500"
+                    icon="fa-solid fa-x"
                   />
                   {{ data.estado }}
                 </p>
