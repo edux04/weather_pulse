@@ -65,7 +65,7 @@ watchEffect(() => {
     </p>
     <div class="flex flex-wrap mt-6">
       <div class="card w-full lg:w-4/12 text-center">
-        <h5 class="card-header">DHT11</h5>
+        <h5 class="card-header">Sensor de temperatura y humedad (DHT11)</h5>
         <div
           class="lg:h-[472px] h-[300px] w-[400px] m-auto bg-white rounded-3xl text-gray-900 dark:text-white dark:bg-gray-900 overflow-auto"
         >
@@ -100,8 +100,8 @@ watchEffect(() => {
         </div>
       </div>
 
-      <div class="card w-full lg:w-4/12 text-center">
-        <h5 class="card-header">HW-080</h5>
+      <div class="card w-full lg:w-4/12 text-center md:mt-0 mt-6">
+        <h5 class="card-header">Sensor de humedad de suelo (HW-080)</h5>
         <div
           class="lg:h-[472px] h-[300px] w-[400px] m-auto bg-white text-gray-900 dark:text-white rounded-3xl dark:bg-gray-900 overflow-auto"
         >
@@ -138,7 +138,7 @@ watchEffect(() => {
       </div>
 
       <div class="card w-full lg:w-4/12 text-center">
-        <h5 class="card-header">Bomba</h5>
+        <h5 class="card-header">Bomba de agua</h5>
         <div
           class="lg:h-[472px] h-[300px] w-[400px] m-auto bg-white rounded-3xl text-gray-900 dark:text-white dark:bg-gray-900 overflow-auto"
         >

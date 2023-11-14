@@ -30,7 +30,7 @@ html {
   padding: 3rem;
   color: #1e1d1d;
   display: inline-flex;
-  padding: 10px 92px;
+  padding: 10px 25px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -38,6 +38,8 @@ html {
   background: linear-gradient(to right, #1de086, #6dcf0b);
   size: 30px;
   margin-bottom: -40%;
+  z-index: 1;
+  position: relative;
 }
 
 /*seccion 2 - css */
