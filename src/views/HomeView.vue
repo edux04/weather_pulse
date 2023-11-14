@@ -117,7 +117,7 @@ const isDarkTheme = inject("isDarkTheme");
         <div class="text-center text-gray-500 dark:text-gray-400">
           <img
             class="mx-auto mb-4 w-36 h-36 rounded-full"
-            src="../assets/images/our-team/nueva2x2.JPG"
+            src="../assets/images/our-team/eduardo.jpg"
             alt="Eduardo Avatar"
           />
           <h3
