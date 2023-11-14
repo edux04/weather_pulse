@@ -95,11 +95,7 @@ const setError = (errorMessage) => {
               />
             </div>
             <div class="flex justify-center">
-              <button class="primary-button" @click="singin()">
-                Acceder
-                <!-- Add the style and icon you want using the Array format -->
-                <font-awesome-icon icon="fa-solid fa-right-to-bracket" />
-              </button>
+              <button class="primary-button" @click="singin()">Acceder</button>
             </div>
           </section>
         </div>

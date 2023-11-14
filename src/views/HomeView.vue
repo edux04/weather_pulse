@@ -6,173 +6,186 @@ const isDarkTheme = inject("isDarkTheme");
 
 <template>
   <!--seccion 2-->
-  <section class="section2 p-5">
-    <div id="section2" class="flex justify-center items-center">
-      <div class="w-full text-center">
-        <div class="">
-          <div class="fotosec2">
-            <img
-              src="../assets/images/section2/LOGO-grande.svg"
-              alt=""
-              class="m-auto"
-            />
-          </div>
-          <p class="w-6/12 m-auto text-left">
-            Se centra en desarrollar un sistema automatizado que monitoree y
-            controle los niveles de humedad y temperatura del suelo para mejorar
-            la eficiencia del riego en la agricultura local. Utilizaremos
-            Raspberry Pi 4 como base para este sistema, aprovechando su
-            versatilidad y capacidades de procesamiento. Nuestro objetivo es
-            crear una solución rentable y de fácil implementación que pueda
-            ayudar a los agricultores locales a mejorar la calidad de sus
-            cultivos y optimizar el uso del agua.
+  <section
+    id="nosotros"
+    class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600"
+  >
+    <div class="sm:flex items-center max-w-screen-xl">
+      <div class="sm:w-1/2 p-10">
+        <div class="image object-center text-center">
+          <img src="../assets/images/section2/LOGO-grande.svg" class="" />
+        </div>
+      </div>
+      <div class="sm:w-1/2 p-5">
+        <div class="text">
+          <h2 class="my-4 font-bold text-3xl sm:text-4xl">
+            <span class="main-color">Conocenos</span>
+          </h2>
+          <p class="text-white">
+            Nos enfocamos en la creación de un sistema automatizado diseñado
+            para supervisar y regular los niveles de humedad y temperatura del
+            suelo, con el propósito de potenciar la eficiencia del riego en la
+            agricultura local. Para este sistema, hemos seleccionado Raspberry
+            Pi 2 como plataforma base, aprovechando su versatilidad y potentes
+            capacidades de procesamiento. Nuestra meta es desarrollar una
+            solución rentable y de implementación sencilla, que contribuya a
+            mejorar la calidad de los cultivos de los agricultores locales, al
+            mismo tiempo que optimiza el uso del agua.
           </p>
         </div>
       </div>
     </div>
   </section>
-  <section class="pt-5 bg-white dark:bg-gray-900">
-    <h1
-      class="text-gray-900 dark:text-white mb-4 text-4xl tracking-tight font-extrabold text-center"
+
+  <section
+    id="diseño"
+    class="pt-5 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600"
+  >
+    <h2
+      class="main-color mb-4 text-4xl tracking-tight font-extrabold text-center"
     >
-      Agrotech Wiring
-    </h1>
+      Diseño electrónico
+    </h2>
     <img
       :src="
         'src/assets/images/' +
         (isDarkTheme ? 'agrotech_wiring_dark.jpg' : 'Agrotech_wiring.jpg')
       "
-      alt=""
+      alt="agrotech wiring"
       class="m-auto"
     />
   </section>
-  <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-        <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-        >
-          Nuestro Equipo
+  <section class="bg-white dark:bg-gray-900" id="equipo">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold main-color">
+          Nuestro equipo
         </h2>
-        <p class="font-light main-color lg:mb-16 sm:text-xl">
-          Conoce a nuestros talentosos integrantes
+        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+          Conoce nuestro talentoso equipo
         </p>
       </div>
-      <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-        <div
-          class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a href="#">
-            <img
-              class="rounded-lg sm:rounded-none sm:rounded-l-lg h-32 w-32"
-              src="../assets/images/our-team/valery.jpg"
-              alt="Vallery Avatar"
-            />
-          </a>
-          <div class="p-5">
-            <h3
-              class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <a href="#">Vallery Flores</a>
-            </h3>
-            <span class="text-gray-500 dark:text-gray-400">10143626</span>
-          </div>
-        </div>
-        <div
-          class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a href="#">
-            <img
-              class="rounded-lg sm:rounded-none sm:rounded-l-lg h-32 w-32"
-              src="../assets/images/our-team/jerines.jpg"
-              alt="Vallery Avatar"
-            />
-          </a>
-          <div class="p-5">
-            <h3
-              class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <a href="#">Jerines Acosta</a>
-            </h3>
-            <span class="text-gray-500 dark:text-gray-400">10153792</span>
-          </div>
-        </div>
-        <div
-          class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a href="#">
-            <img
-              class="rounded-lg sm:rounded-none sm:rounded-l-lg h-32 w-32"
-              src="../assets/images/our-team/ayleen.jpg"
-              alt="Vallery Avatar"
-            />
-          </a>
-          <div class="p-5">
-            <h3
-              class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <a href="#">Ayleen Ubrí</a>
-            </h3>
-            <span class="text-gray-500 dark:text-gray-400">10153491</span>
-          </div>
-        </div>
-        <div
-          class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a href="#">
-            <img
-              class="rounded-lg sm:rounded-none sm:rounded-l-lg h-32 w-32"
-              src="../assets/images/our-team/nueva2x2.JPG"
-              alt="Vallery Avatar"
-            />
-          </a>
-          <div class="p-5">
-            <h3
-              class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <a href="#">Eduardo Ramírez</a>
-            </h3>
-            <span class="text-gray-500 dark:text-gray-400">10153511</span>
-          </div>
-        </div>
-        <div
-          class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a href="#">
-            <img
-              class="rounded-lg sm:rounded-none sm:rounded-l-lg h-32 w-32"
-              src="../assets/images/our-team/angel.jpg"
-              alt="Vallery Avatar"
-            />
-          </a>
-          <div class="p-5">
-            <h3
-              class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <a href="#">Angel Corporan</a>
-            </h3>
-            <span class="text-gray-500 dark:text-gray-400">10153850</span>
-          </div>
+      <div
+        class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
+        <!-- Participante 1 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="../assets/images/our-team/valery.jpg"
+            alt="Vallery Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Vallery Flores</a>
+          </h3>
+          <p>10143626</p>
         </div>
 
-        <div
-          class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
-        >
-          <a href="#">
-            <img
-              class="rounded-lg sm:rounded-none sm:rounded-l-lg h-32 w-32"
-              src="../assets/images/our-team/Ricardo.jpg"
-              alt="Vallery Avatar"
-            />
-          </a>
-          <div class="p-5">
-            <h3
-              class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <a href="#">Ricardo Suero</a>
-            </h3>
-            <span class="text-gray-500 dark:text-gray-400">10153902</span>
-          </div>
+        <!-- Participante 2 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="../assets/images/our-team/jerines.jpg"
+            alt="Jerines Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Jerines Acosta</a>
+          </h3>
+          <p>10153792</p>
+        </div>
+
+        <!-- Participante 3 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="../assets/images/our-team/ayleen.jpg"
+            alt="Ayleen Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Ayleen Ubrí</a>
+          </h3>
+          <p>10153491</p>
+        </div>
+
+        <!-- Participante 4 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="../assets/images/our-team/nueva2x2.JPG"
+            alt="Eduardo Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Eduardo Ramírez</a>
+          </h3>
+          <p>10153511</p>
+        </div>
+
+        <!-- Participante 5 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="../assets/images/our-team/angel.jpg"
+            alt="Angel Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Angel Corporan</a>
+          </h3>
+          <p>10153850</p>
+        </div>
+
+        <!-- Participante 6 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="../assets/images/our-team/Ricardo.jpg"
+            alt="Ricardo Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Ricardo Suero</a>
+          </h3>
+          <p>10153902</p>
+        </div>
+
+        <!-- Participante 6 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="https://ui-avatars.com/api/?name=Greilin+Reinoso&background=random"
+            alt="Greilin Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Greilin Reinoso</a>
+          </h3>
+          <p>0152074</p>
+        </div>
+
+        <!-- Participante 7 -->
+        <div class="text-center text-gray-500 dark:text-gray-400">
+          <img
+            class="mx-auto mb-4 w-36 h-36 rounded-full"
+            src="https://ui-avatars.com/api/?name=Mary+Gómez&background=random"
+            alt="Mary Avatar"
+          />
+          <h3
+            class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            <a href="#">Mary Gómez</a>
+          </h3>
+          <p>10154060</p>
         </div>
       </div>
     </div>

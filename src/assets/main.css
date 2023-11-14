@@ -7,17 +7,17 @@
 .main-color {
   color: var(--main-color);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 #section1 {
-  margin-left: 25px;
-  background-image: url(/src/assets/images/section1/Background-1.png);
-  background-position: 100%;
-  background-attachment: scroll;
-  background-size: 200%;
-  margin-left: -0.9%;
-  margin-right: -0.9%;
-  margin-bottom: -0.1%;
-  height: 100vh;
+  background: url(/src/assets/images/section1/Background-1.png) no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
 }
 .card-header {
   padding: 3rem;
@@ -35,11 +35,11 @@
 
 /*seccion 2 - css */
 
-.section2 {
+#nosotros {
   margin-left: 25px; /* Ajusta el valor para que el contenido de la sección 1 no quede oculto detrás de la barra lateral */
   background-image: url(/src/assets/images/section2/Background-2.png);
   background-position: 100%;
-  background-size: 100%;
+  background-size: 100% 100%;
   margin-left: -0.9%;
   margin-right: -0.9%;
   margin-bottom: -0.1%;
