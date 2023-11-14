@@ -6,37 +6,47 @@ const isDarkTheme = inject("isDarkTheme");
 
 <template>
   <!--seccion 2-->
-  <section
-    id="nosotros"
-    class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600"
-  >
-    <div class="sm:flex items-center max-w-screen-xl">
-      <div class="sm:w-1/2 p-10">
-        <div class="image object-center text-center">
-          <img src="../assets/images/section2/LOGO-grande.svg" class="" />
-        </div>
-      </div>
-      <div class="sm:w-1/2 p-5">
-        <div class="text">
-          <h2 class="my-4 font-bold text-3xl sm:text-4xl">
-            <span class="main-color">Conocenos</span>
-          </h2>
-          <p class="text-white">
-            Nos enfocamos en la creación de un sistema automatizado diseñado
-            para supervisar y regular los niveles de humedad y temperatura del
-            suelo, con el propósito de potenciar la eficiencia del riego en la
-            agricultura local. Para este sistema, hemos seleccionado Raspberry
-            Pi 2 como plataforma base, aprovechando su versatilidad y potentes
-            capacidades de procesamiento. Nuestra meta es desarrollar una
-            solución rentable y de implementación sencilla, que contribuya a
-            mejorar la calidad de los cultivos de los agricultores locales, al
-            mismo tiempo que optimiza el uso del agua.
-          </p>
-        </div>
+
+  <div id="nosotros" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
+      >
+        <div class="pt-1"></div>
+
+        <main
+          class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+        >
+          <div class="sm:text-center lg:text-left">
+            <h1
+              class="my-6 tracking-tight font-extrabold main-color text-center text-4xl"
+            >
+              Agrotech
+            </h1>
+
+            <p>
+              Nos enfocamos en la creación de un sistema automatizado diseñado
+              para supervisar y regular los niveles de humedad y temperatura del
+              suelo, con el propósito de potenciar la eficiencia del riego en la
+              agricultura local. Para este sistema, hemos seleccionado Raspberry
+              Pi 2 como plataforma base, aprovechando su versatilidad y potentes
+              capacidades de procesamiento. Nuestra meta es desarrollar una
+              solución rentable y de implementación sencilla, que contribuya a
+              mejorar la calidad de los cultivos de los agricultores locales, al
+              mismo tiempo que optimiza el uso del agua.
+            </p>
+          </div>
+        </main>
       </div>
     </div>
-  </section>
-
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 pt-6">
+      <img
+        class="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="../assets/images/section2/LOGO-grande.svg"
+        alt=""
+      />
+    </div>
+  </div>
   <section
     id="diseño"
     class="pt-5 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-600"
