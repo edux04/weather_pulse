@@ -57,10 +57,14 @@ const isDarkTheme = inject("isDarkTheme");
       Diseño electrónico
     </h2>
     <img
-      :src="
-        'src/assets/images/' +
-        (isDarkTheme ? 'agrotech_wiring_dark.jpg' : 'Agrotech_wiring.jpg')
-      "
+      v-if="isDarkTheme"
+      src="../assets/images/agrotech_wiring_dark.jpg"
+      alt="agrotech wiring"
+      class="m-auto"
+    />
+    <img
+      v-if="!isDarkTheme"
+      src="../assets/images/Agrotech_wiring.jpg"
       alt="agrotech wiring"
       class="m-auto"
     />
