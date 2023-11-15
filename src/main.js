@@ -13,10 +13,17 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCh8OfGoL4POUls8l0j49wLMwMpFzsY4g0",
+
   authDomain: "agrotech-8cf3f.firebaseapp.com",
+
+  databaseURL: "https://agrotech-8cf3f-default-rtdb.firebaseio.com",
+
   projectId: "agrotech-8cf3f",
+
   storageBucket: "agrotech-8cf3f.appspot.com",
+
   messagingSenderId: "790530689672",
+
   appId: "1:790530689672:web:cf72fa3e32d45e66822d3d",
 };
 
