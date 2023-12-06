@@ -1,6 +1,5 @@
 <script setup>
 import { inject } from "vue";
-
 const isDarkTheme = inject("isDarkTheme");
 </script>
 

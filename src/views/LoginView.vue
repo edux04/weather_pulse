@@ -47,7 +47,7 @@ const setError = (errorMessage) => {
         to="/"
         ><img
           class="w-[200px]"
-          src="../assets/images/logo_small.png"
+          src="@/assets/images/logo_small.png"
           alt="logo"
       /></RouterLink>
 
