@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView, useRouter } from "vue-router";
-import { onMounted, provide, ref } from "vue";
+import { onMounted, provide, ref, onBeforeUnmount } from "vue";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { initFlowbite } from "flowbite";
 import { faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,13 @@ const isLoggedIn = ref(false);
 const router = useRouter();
 let auth;
 
+const isScrolled = ref(false);
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 0;
+};
+
 onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
   initFlowbite();
   auth = getAuth();
   onAuthStateChanged(auth, (user) => {
@@ -23,6 +29,9 @@ onMounted(() => {
       isLoggedIn.value = false;
     }
   });
+});
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
 });
 
 const logOut = () => {
@@ -56,7 +65,8 @@ provide("isDarkTheme", isDarkTheme);
 
 <template>
   <nav
-    class="bg-white dark:bg-gray-900 w-full top-0 start-0 border-b border-gray-200 dark:border-gray-600"
+    class="w-full top-0 start-0 bg-transparent fixed z-10 text-white"
+    :class="{ scrolled: isScrolled }"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -65,29 +75,24 @@ provide("isDarkTheme", isDarkTheme);
         class="flex items-center space-x-3 rtl:space-x-reverse"
         to="/"
       >
-        <img src="./assets/logo-2.svg" class="h-8" alt="Agrotech Logo" />
-        <span
-          class="self-center text-2xl font-semibold whitespace-nowrap main-color"
-          >Agrotech</span
-        ></RouterLink
-      >
-      <section class="md:hidden">
-        <button id="theme-toggle" @click="toggleTheme">
-          <font-awesome-icon
-            class="text-yellow-300 h-6 w-6"
-            icon="fa fa-sun "
-            :class="{ hidden: isDarkTheme }"
-          />
-          <font-awesome-icon
-            class="text-white h-6 w-6"
-            icon="fa fa-moon"
-            :class="{ hidden: !isDarkTheme }"
-          />
+        <img
+          src="./assets/images/logo_small.png"
+          class="h-12"
+          alt="Agrotech Logo"
+        />
+      </RouterLink>
+      <section class="md:hidden flex">
+        <button class="btn p-1 mr-2" v-if="isLoggedIn" @click="logOut()">
+          Salir
         </button>
+        <RouterLink class="btn p-1 mr-2" to="/login" v-if="!isLoggedIn">
+          Accede
+          <font-awesome-icon icon="fa-solid fa-user" />
+        </RouterLink>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="inline-flex items-center p-2 w-10 h-10 bg-white justify-center text-sm rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -109,64 +114,49 @@ provide("isDarkTheme", isDarkTheme);
           </svg>
         </button>
       </section>
-
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <div
+        class="hidden w-full md:block md:w-auto md:bg-transparent bg-white rounded md:text-white text-stone-950"
+        id="navbar-default"
+      >
         <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
         >
           <li class="self-center">
             <RouterLink
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
               to="/dashboard"
               v-if="isLoggedIn"
             >
-              Dashboard</RouterLink
-            >
+              Dashboard
+            </RouterLink>
           </li>
           <li class="self-center">
             <RouterLink
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              to="/#nosotros"
+              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
+              to="/#about-us"
             >
-              ¿Qué es AgroTech?</RouterLink
-            >
-          </li>
-          <li class="self-center">
-            <RouterLink
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              to="/#diseño"
-            >
-              Diseño</RouterLink
-            >
-          </li>
-          <li class="self-center">
-            <RouterLink
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              to="/#equipo"
-            >
-              Equipo</RouterLink
-            >
+              ¿Qué es WeatherPulse?
+            </RouterLink>
           </li>
 
-          <button id="theme-toggle" @click="toggleTheme">
-            <font-awesome-icon
-              class="text-yellow-300 h-6 w-6"
-              icon="fa fa-sun "
-              :class="{ hidden: isDarkTheme }"
-            />
-            <font-awesome-icon
-              class="text-white h-6 w-6"
-              icon="fa fa-moon"
-              :class="{ hidden: !isDarkTheme }"
-            />
-          </button>
+          <li class="self-center">
+            <RouterLink
+              class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
+              to="/#ourTeam"
+            >
+              Equipo
+            </RouterLink>
+          </li>
 
-          <button class="primary-button" v-if="isLoggedIn" @click="logOut()">
+          <button
+            class="btn p-2 hidden md:block"
+            v-if="isLoggedIn"
+            @click="logOut()"
+          >
             Salir
           </button>
-
           <RouterLink
-            class="primary-button block text-gray-900 rounded dark:text-white"
+            class="btn p-2 hidden md:block"
             to="/login"
             v-if="!isLoggedIn"
           >
@@ -180,3 +170,15 @@ provide("isDarkTheme", isDarkTheme);
 
   <RouterView />
 </template>
+<style scoped>
+/* Add styles for the scrolled state */
+nav.scrolled {
+  background-image: linear-gradient(
+    0deg,
+    rgba(3, 0, 35, 0.5) 50.68359375%,
+    /* Adjust the alpha value (0.5 in this case) for transparency */
+      rgba(1, 75, 144, 0.5) 100%
+      /* Adjust the alpha value (0.5 in this case) for transparency */
+  );
+}
+</style>

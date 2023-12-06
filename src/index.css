@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --main-color: #6ed209;
+  --main-color: rgba(1, 180, 237, 0.9);
 }
 .primary-button {
   background-color: var(--main-color);
@@ -14,46 +14,292 @@
 .main-color {
   color: var(--main-color);
 }
+.main-bg-color {
+  background-color: #030023;
+}
+.main-color:disabled {
+  color: red;
+}
 html {
   scroll-behavior: smooth;
 }
-#section1 {
-  background: url(/src/assets/images/section1/Background-1.png) no-repeat center
-    center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100vh;
+#dashboard {
+  background: linear-gradient(180deg, #030023 50.68%, #025390 100%);
 }
 .card-header {
   padding: 3rem;
-  color: #1e1d1d;
+  color: #fff;
   display: inline-flex;
   padding: 10px 25px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  background: linear-gradient(to right, #1de086, #6dcf0b);
+  background: rgba(1, 180, 237, 0.9);
   size: 30px;
   margin-bottom: -40%;
   z-index: 1;
   position: relative;
 }
+.card-body {
+  background: rgba(0, 0, 34, 0.8);
 
+  box-shadow: 1px 1px 1px 6px rgba(255, 255, 255, 0.13);
+}
 /*seccion 2 - css */
 
-#nosotros {
-  margin-left: 25px; /* Ajusta el valor para que el contenido de la sección 1 no quede oculto detrás de la barra lateral */
-  background-image: url(/src/assets/images/section2/Background-2.png);
-  background-position: 100%;
-  background-size: 100% 100%;
-  margin-left: -0.9%;
-  margin-right: -0.9%;
-  margin-bottom: -0.1%;
-  background-attachment: fixed;
+@font-face {
+  font-family: "Avenir Book";
+  src: url("./assets/fonts/Avenir Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "Avenir Book", sans-serif;
+}
+
+.principal {
+  background-image: linear-gradient(
+    0deg,
+    rgba(3.000000058673322, 0, 35.00000171363354, 1) 50.68359375%,
+    rgba(1.7555483104661107, 82.86260202527046, 144.3920847773552, 1) 100%
+  );
+  margin: 0;
+  padding: 0;
+  background-size: cover;
   background-repeat: no-repeat;
-  flex-shrink: 0;
-  color: white;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.principal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  mix-blend-mode: pass-through;
+}
+
+#electronic-design {
+  background-image: linear-gradient(
+    0deg,
+    #21648f 50.68359375%,
+    rgba(1.7555483104661107, 82.86260202527046, 144.3920847773552, 1) 100%
+  );
+}
+#electronic-design img {
+  height: auto;
+}
+
+header,
+nav,
+section,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  padding-right: 100px;
+}
+
+nav li {
+  display: inline;
+  margin-left: 30px;
+}
+nav .btn {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+nav .btn:hover {
+  background: #fff;
+  color: #090f1d;
+}
+
+#about-us {
+  padding-top: 300px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+section p {
+  word-wrap: break-word;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  line-height: 1.4;
+  max-height: 4.2em;
+  overflow: hidden;
+}
+
+#nuestroTeam {
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.secundario {
+  background-image: linear-gradient(
+    0deg,
+    rgba(3.000000058673322, 0, 35.00000171363354, 1) 50.68359375%,
+    rgba(1.7555483104661107, 82.86260202527046, 144.3920847773552, 1) 100%
+  );
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  background-color: #333;
+  position: relative;
+}
+
+.secundario::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/Background2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.principal,
+.secundario {
+  border: 0;
+}
+
+.ourT {
+  margin-top: 120px;
+  padding: 50px 0 50px;
+}
+
+.integrante-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.integrante {
+  text-align: center;
+  box-sizing: border-box; /* Añadido para incluir padding y border en el ancho */
+  padding: 0 10px; /* Espaciado entre los integrantes */
+}
+
+.integrante img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.integrante h3,
+.integrante p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.integrante p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+
+/* Establece un ancho máximo para mejorar la legibilidad en pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 5px;
+  }
+
+  nav ul {
+    padding-right: 20px;
+  }
+
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #about-us {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  section p {
+    max-height: none;
+    overflow: visible;
+  }
+
+  #nuestroTeam {
+    padding: 10px;
+    height: auto;
+  }
+
+  .integrante {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+
+  .integrante img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .integrante h3,
+  .integrante p {
+    font-size: 15px;
+  }
+  .integrante-container {
+    justify-content: flex-start; /* Cambiar de space-around a flex-start */
+  }
+
+  .ourT {
+    margin-top: 80px;
+    padding: 30px 0 20px;
+  }
 }

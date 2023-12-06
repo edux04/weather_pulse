@@ -12,19 +12,17 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCh8OfGoL4POUls8l0j49wLMwMpFzsY4g0",
+  apiKey: "AIzaSyC8PMMK7bWiJKrmn4oeBETYTXIOo_Whjzk",
 
-  authDomain: "agrotech-8cf3f.firebaseapp.com",
+  authDomain: "weatherpulse-72fd9.firebaseapp.com",
 
-  databaseURL: "https://agrotech-8cf3f-default-rtdb.firebaseio.com",
+  projectId: "weatherpulse-72fd9",
 
-  projectId: "agrotech-8cf3f",
+  storageBucket: "weatherpulse-72fd9.appspot.com",
 
-  storageBucket: "agrotech-8cf3f.appspot.com",
+  messagingSenderId: "736695199273",
 
-  messagingSenderId: "790530689672",
-
-  appId: "1:790530689672:web:cf72fa3e32d45e66822d3d",
+  appId: "1:736695199273:web:39815e6e163ca6b0119e38",
 };
 
 // Initialize Firebase

@@ -40,12 +40,15 @@ const setError = (errorMessage) => {
 </script>
 
 <template>
-  <section class="bg-gray-50 dark:bg-gray-900 h-screen">
+  <section class="bg-gray-900 h-screen pt-40">
     <div class="flex flex-col items-center justify-center mx-auto pt-6">
       <RouterLink
         class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
         to="/"
-        ><img class="w-[200px]" src="../assets/logo.svg" alt="logo"
+        ><img
+          class="w-[200px]"
+          src="../assets/images/logo_small.png"
+          alt="logo"
       /></RouterLink>
 
       <div
