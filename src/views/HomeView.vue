@@ -30,7 +30,7 @@ const isDarkTheme = inject("isDarkTheme");
       Diseño electrónico
     </h2>
     <br />
-    <img src="../assets/images/weather_pulse_transparent.png" alt="Diseño" />
+    <img src="@/assets/images/weather_pulse_transparent.png" alt="Diseño" />
   </section>
   <div class="secundario">
     <section id="ourTeam">
@@ -55,7 +55,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/eduardo.jpg"
+              src="@/assets/images/our-team/eduardo.jpg"
               alt="Eduardo Ramon"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -68,7 +68,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/ricardo.jpg"
+              src="@/assets/images/our-team/ricardo.jpg"
               alt="Ricardo Suero"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -81,7 +81,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/vallery.jpg"
+              src="@/assets/images/our-team/vallery.jpg"
               alt="Vallery Flores"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -94,7 +94,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/mary.jpeg"
+              src="@/assets/images/our-team/mary.jpeg"
               alt="Mary Gómez"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -107,7 +107,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/jerines.jpeg"
+              src="@/assets/images/our-team/jerines.jpeg"
               alt="Jerines Acosta"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -120,7 +120,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/ayleen.jpg"
+              src="@/assets/images/our-team/ayleen.jpg"
               alt="Ayleen Ubrí"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -133,7 +133,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/greilin.jpeg"
+              src="@/assets/images/our-team/greilin.jpeg"
               alt="Greilin Reinoso"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -146,7 +146,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/angel.jpg"
+              src="@/assets/images/our-team/angel.jpg"
               alt="Angel Corporan"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
@@ -159,7 +159,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="../assets/images/our-team/jonathan.png"
+              src="@/assets/images/our-team/jonathan.png"
               alt="Jonathan Del Rosario"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
