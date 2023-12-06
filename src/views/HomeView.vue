@@ -67,7 +67,7 @@ const isDarkTheme = inject("isDarkTheme");
           <div class="text-center text-gray-500 dark:text-gray-400">
             <img
               class="mx-auto mb-4 h-[100px]"
-              src="@/assets/images/our-team/ricardo.jpg"
+              src="@/assets/images/our-team/ricardo2.jpg"
               alt="Ricardo Suero"
             />
             <h3 class="mb-1 text-2xl font-bold tracking-tight dark:text-white">
