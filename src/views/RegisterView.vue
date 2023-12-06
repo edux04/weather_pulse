@@ -42,7 +42,10 @@ const setError = (errorMessage) => {
       <RouterLink
         class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
         to="/"
-        ><img class="w-[200px]" src="../assets/logo.svg" alt="logo"
+        ><img
+          class="w-[200px]"
+          src="../assets/images/logo_small.png"
+          alt="logo"
       /></RouterLink>
 
       <div
