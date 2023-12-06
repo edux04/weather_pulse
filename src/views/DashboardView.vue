@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, watchEffect, onUnmounted } from "vue";
+import { ref, onMounted, watchEffect } from "vue";
 import {
   getDocs,
   collection,
@@ -81,7 +81,7 @@ const fetchData = async () => {
 onMounted(fetchData);
 const audio = new Audio("/src/assets/sounds/rain.mp3"); // replace with the correct path
 watchEffect(() => {
-  const intervalId = setInterval(fetchData, 60000);
+  setInterval(fetchData, 60000);
   if (lastRainStatus.value) {
     // If lastRainStatus is true, play the rain sound in a loop
     audio.loop = true;
@@ -92,7 +92,6 @@ watchEffect(() => {
     audio.currentTime = 0; // Reset the audio to the beginning
     audio.loop = false; // Disable looping
   }
-  onUnmounted(() => clearInterval(intervalId));
 });
 
 const toggleWaterPump = async () => {
